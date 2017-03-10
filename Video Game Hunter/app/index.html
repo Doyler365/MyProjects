@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="app" lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Video Game Hunter</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="ionic/css/ionic.css">
+    <script src="ionic/css/ionic.bundle.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controller.js"></script>
+	
+</head>
+
+<body>
+
+		<div class="bar bar-header">
+  			<button class="button icon ion-navicon"></button>
+  			<h1 class="title">Video Game Hunter</h1>
+  			<button class="button icon ion-home"></button>
+		</div>
+	
+			<div ng-controller="MyController">  
+				<div id="games">
+				
+					<h2>Results</h2>
+					
+					<div>
+						<ul>
+							<li ng-repeat="result in results">
+								 <img ng-src="{{results.image}}"/>
+								 <p>{{results.name}}</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+	
+</body>
+
+</html>      
