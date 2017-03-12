@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="app" lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Video Game Hunter</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="ionic/css/ionic.css">
+	<link rel="stylesheet" type="text/css" href="css/master.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet"> 
+    <script src="ionic/css/ionic.bundle.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/latest-controller.js"></script>
+	
+</head>
+
+<body ng-app="app">
+
+		<div class="bar bar-header bar-positive">
+  			<button class="button icon ion-navicon"></button>
+  			<h1 class="title">VIDEO GAME HUNTER</h1>
+  			<button class="button icon ion-home"></button>
+		</div>
+		
+		<div class="bar bar-subheader bar-calm tabs">
+			<a class="tab-item" href="platform.html">
+				<h1>Platform</h1>
+			</a>
+			<a class="tab-item selected" href="index.html">
+				<h1>Latest</h1>
+			</a>
+			<a class="tab-item" href="genre.html">
+				<h1>Genre</h1>
+			</a>
+		</div>
+		
+		<div class="content has-header has-subheader">
+			<div ng-controller="LatestController">
+				<div class="list">
+					<a ng-repeat="result in results" class="item item-thumbnail-left" href="{{result.site_detail_url}}">
+						<img ng-src="{{result.image.small_url}}" />
+						<h2><pre id="gameName">{{result.name}}</pre></h2>
+					</a>
+				</div>
+			</div>		
+		</div>
+	
+</body>
+
+</html>      
