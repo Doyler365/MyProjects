@@ -1,0 +1,9 @@
+<div ng-controller="LatestController">
+	<div class="list">
+		<a ng-repeat="result in results" class="item item-thumbnail-left" href="{{result.site_detail_url}}">
+			<img ng-src="{{result.image.small_url}}" />
+			<h2><pre id="gameName">{{result.name}}</pre></h2>
+		</a>
+	</div>
+</div>		
+	
